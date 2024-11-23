@@ -1,0 +1,661 @@
+/* Základní reset: Resetuje styly pro všechny elementy, aby se odstranily předdefinované hodnoty odlišných prohlížčů */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definice CSS proměnných */
+:root {
+    --primary-color: #222;
+    --secondary-color: #b3d1ff;
+    --accent-color: #5985C9;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --white-color: #fff;
+    --light-blue-color: #E4F2FF;
+    --font-size-large: 24px;
+    --font-size-medium: 20px;
+    --font-size-small: 14px;
+    --padding-standard: 15px;
+    --border-radius: 10px;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --transition-duration: 0.3s;
+    --hover-scale: 1.05;
+    --focus-outline: 3px solid #5985C9;
+}
+
+/* Tělo dokumentu: Nastavení základního stylu pro tělo webu */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 100px;
+}
+
+/* Hlavička: Stylizace hlavičky, aby byla pevná, zůstavala nahoře a obsahovala logo a menu */
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Kontejner pro logo: Umístění loga do středu hlavičky */
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Logo: Definice stylu pro logo webu */
+.logo {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Obrázek loga: Nastavení velikosti pro obrázek loga */
+.logo img {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Burger menu: Styl pro ikonku menu, která se objeví na mobilních zařízeních */
+.burger-menu {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.burger-menu img {
+    width: 30px;
+    height: auto;
+}
+
+/* Kontejner hlavních článků: Zarovnání nadpisu pro hlavní články */
+.main-articles-heading-container {
+    width: 100%;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+/* Nadpis hlavních článků */
+.main-articles-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Kontejner pro články: Flexbox pro umístění článků pod sebou */
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Hlavní článek: Stylizace jednotlivých hlavních článků */
+.main-article {
+    background-color: var(--white-color);
+    padding: var(--padding-standard);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.main-article:hover {
+    transform: scale(var(--hover-scale));
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-article:focus {
+    outline: var(--focus-outline);
+}
+
+/* Obrázek v hlavním článku */
+.main-article img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Text v hlavním článku */
+.article-text {
+    margin-top: 5px;
+}
+
+/* Kontejner pro vedlejší články: Flexbox pro umístění vedlejších článků pod sebou */
+.side-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Vedlejší článek: Stylizace jednotlivých vedlejších článků */
+.side-article {
+    background-color: var(--white-color);
+    padding: var(--padding-standard);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    min-height: 160px;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.side-article:hover {
+    transform: scale(var(--hover-scale));
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.side-article:focus {
+    outline: var(--focus-outline);
+}
+
+/* Obrázek ve vedlejším článku */
+.side-article img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Sekce recenzí: Stylizace sekce pro recenze */
+.reviews {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Nadpis recenzí */
+.reviews h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: var(--font-size-medium);
+}
+
+/* Jednotlivá recenze: Stylizace jednotlivých recenzí */
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: var(--light-blue-color);
+    padding: var(--padding-standard);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.review:hover {
+    transform: scale(var(--hover-scale));
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.review:focus {
+    outline: var(--focus-outline);
+}
+
+/* Obrázek recenze */
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+/* Text recenze */
+.review-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: var(--font-size-small);
+}
+
+/* Retro sekce: Stylizace sekce s retro obsahem */
+.retro {
+    background-color: var(--accent-color);
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Nadpis retro sekce */
+.retro h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: var(--font-size-medium);
+}
+
+/* Retro článek: Stylizace jednotlivých retro článků */
+.retro-article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--light-blue-color);
+    padding: var(--padding-standard);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.retro-article:hover {
+    transform: scale(var(--hover-scale));
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.retro-article:focus {
+    outline: var(--focus-outline);
+}
+
+/* Obrázek v retro článku */
+.retro-article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text v retro článku */
+.retro-text {
+    background-color: var(--light-blue-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: auto;
+}
+
+/* Zápatí: Stylizace zápatí webu */
+footer {
+    background-color: var(--secondary-color);
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Navigace v zápatí: Grid pro odkazy v zápatí */
+.footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 500px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Odkazy v zápatí */
+.footer-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-duration);
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: var(--primary-color);
+    outline: var(--focus-outline);
+}
+
+/* Sociální odkazy v zápatí */
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-socials p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Ikonky sociálních sítí */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Text v zápatí */
+footer p:last-child {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+/* Sociální ikonky: Flexbox pro zarovnání ikonek */
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Stylizace jednotlivých odkazů sociálních sítí */
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    transition: transform var(--transition-duration);
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+    transform: scale(var(--hover-scale));
+    outline: var(--focus-outline);
+}
+
+.social-icons a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responzivita: Styl pro tablety od 768px do 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 30px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .main-articles-heading {
+        font-size: 24px;
+    }
+
+    .articles-wrapper {
+        padding: 0 40px;
+    }
+
+    .main-article,
+    .main-article, .side-article {
+        width: 100%;
+    }
+
+    .reviews {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .retro {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .review img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-nav {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* Responzivita: Styl pro obrazovky od 1025px do 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    header {
+        padding: 40px 80px;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+
+    .main-articles-heading {
+        font-size: 36px;
+        padding-top: 40px;
+    }
+
+    .articles-wrapper {
+        margin: 0 auto;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .articles-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .main-article {
+        font-size: 22px;
+    }
+
+    .side-articles {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        align-items: stretch;
+        height: 100%;
+    }
+
+    .side-article {
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        font-size: 18px;
+    }
+
+    .side-article img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+    }
+
+    /* Recenze */
+    .reviews {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 30px;
+    }
+
+    .reviews h2 {
+        font-size: 28px;
+    }
+
+    .review-text {
+        font-size: 22px;
+    }
+
+    .review {
+        padding: 20px;
+        background-color: #E4F2FF;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .review img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+    }
+
+    /* Retro sekce */
+    .retro {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    .retro h2 {
+        font-size: 28px;
+    }
+
+    .retro-article {
+        padding: 20px;
+        background-color: #E4F2FF;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        line-height: 1.5;
+    }
+
+    footer {
+        padding: 40px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .footer-nav {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* Responzivita: (1441px a výše) */
+@media (min-width: 1441px) {
+    header {
+        padding: 80px 120px;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    .main-articles-heading {
+        font-size: 48px;
+        padding-top: 80px;
+    }
+
+    .articles-wrapper {
+        margin: 0 auto;
+        padding: 0 30px;
+        max-width: 100%;
+    }
+
+    .articles-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        align-items: stretch;
+    }
+
+    .main-article {
+        font-size: 28px;
+    }
+
+    .side-articles {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 50px;
+        align-items: stretch;
+        height: 100%;
+    }
+
+    .side-article {
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        font-size: 24px;
+    }
+
+    .side-article img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+    }
+
+    /* Recenze */
+    .reviews {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 50px;
+    }
+
+    .reviews h2 {
+        font-size: 35px;
+    }
+
+    .review-text {
+        font-size: 28px;
+    }
+
+    .review {
+        padding: 40px;
+        background-color: #E4F2FF;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    .review img {
+        width: 140px;
+        height: 140px;
+        border-radius: 5px;
+    }
+
+    /* Retro sekce */
+    .retro {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+
+    .retro h2 {
+        font-size: 35px;
+    }
+
+    .retro-article {
+        padding: 40px;
+        background-color: #E4F2FF;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        line-height: 1.5;
+    }
+
+    footer {
+        padding: 80px;
+        font-size: 22px;
+        line-height: 1.6;
+    }
+
+    .footer-nav {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
