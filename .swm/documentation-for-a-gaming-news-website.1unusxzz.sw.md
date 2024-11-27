@@ -753,4 +753,3 @@ ARIA štítky a role i alternativní popisky se používají k zlepšení přís
 
 Pro podrobný pohled na implementaci se odkazujte na kompletní soubory CSS a HTML poskytnuté výše ve výňatcích.
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBd2ViZGVzaWduJTNBJTNBY3ptcmF0OTU4" repo-name="webdesign"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
