@@ -442,7 +442,7 @@ Web by měl být hostován na platformě, která podporuje HTML, CSS a JavaScrip
 Při tvorbě webové stránky jsme pracovali s nástrojem ChatGPT 4o with Canvas. Tento systém nám umožnil zvládnout nejen technickou část, jako je kódování, ale také obsahovou a vizuální stránku projektu.
 
 \
-&nbsp;**Jak jsme nástroj použili?**
+**Jak jsme nástroj použili?**
 
 1. **Generování kódu**
 
@@ -457,7 +457,7 @@ Generování smyšlených textů pro naši webovou stránku bylo další důlež
 Pro grafickou stránku projektu jsme využili schopnosti nástroje generovat obrázky podle našich zadání. Ilustrace a vizuální prvky byly tvořeny na míru tak, aby ladily s celkovým vzhledem a účelem webu.
 
 \
-&nbsp;**Přínosy a výzvy při používání**\
+**Přínosy a výzvy při používání**\
 &nbsp;Použití ChatGPT 4o with Canvas nám výrazně usnadnilo práci a zrychlilo proces tvorby. Jednou z největších výhod byla jeho univerzálnost – mohli jsme v něm řešit kódování, texty i grafiku, což nám umožnilo soustředit se na celkovou koncepci projektu místo řešení jednotlivých částí samostatně.\
 &nbsp;Nicméně i zde jsme narazili na určité výzvy. Přesné formulování zadání bylo klíčové, zejména u generování obrázků a některých částí kódu. Chybný nebo nejasný popis mohl vést k výsledkům, které neodpovídaly našim představám, což vyžadovalo opakované úpravy.\
 &nbsp;Celkově byl ale přínos nástroje ChatGPT 4o with Canvas značný. Pomohl nám vytvořit komplexní projekt v kratším čase a s menší námahou, než bychom toho dosáhli bez jeho pomoci. Tato zkušenost ukázala, že generativní umělá inteligence může být cenným pomocníkem i v kreativních a technických projektech.
@@ -513,6 +513,8 @@ Web je plně responzivní díky použití CSS media queries stylem mobile first 
 <SwmSnippet path="/Web/styles.css" line="501">
 
 ---
+
+&nbsp;
 
 ```
 /* Responzivita: Styl pro obrazovky od 1025px */
@@ -650,6 +652,234 @@ V úryvku jsou použitý proměnné jako margin, color, font-size, které jsou v
     --transition-duration: 0.3s;
     --hover-scale: 1.05;
     --focus-outline: 3px solid #5985C9;
+}
+```
+
+---
+
+</SwmSnippet>
+
+&nbsp;
+
+<SwmSnippet path="/Web/index.html" line="9">
+
+---
+
+&nbsp;
+
+```html
+</head>
+<body>
+<!-- Hlavička -->
+<header>
+        <div class="logo">
+                <img src="images/logo.png" alt="Logo webu Questpoint">
+        </div>
+        <nav class="desktop-nav">
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/styles.css" line="42">
+
+---
+
+&nbsp;
+
+```css
+/* Hlavička */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    z-index: 1000;
+}
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/styles.css" line="368">
+
+---
+
+&nbsp;
+
+```css
+/* Zápatí: Stylizace zápatí webu */
+footer {
+    background-color: var(--secondary-color);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/styles.css" line="599">
+
+---
+
+&nbsp;
+
+```css
+    /* Recenze */
+    .reviews {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 30px;
+    }
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/styles.css" line="630">
+
+---
+
+&nbsp;
+
+```css
+    /* Retro sekce */
+    .retro {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/styles.css" line="649">
+
+---
+
+&nbsp;
+
+```css
+    footer {
+        padding: 40px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .footer-nav {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/styles.css" line="56">
+
+---
+
+&nbsp;
+
+```css
+/* Obrázek loga: Nastavení velikosti pro obrázek loga */
+.logo img {
+    width: 100px;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/styles.css" line="413">
+
+---
+
+&nbsp;
+
+```css
+.footer-socials p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/index.html" line="58">
+
+---
+
+&nbsp;
+
+```html
+<!-- Hlavní sekce s články -->
+<main class="articles-wrapper" aria-labelledby="main-articles-heading">
+        <h2 id="main-articles-heading" class="main-articles-heading">Nejnovější články</h2> <!-- Nadpis sekce nejnovějších článků -->
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/index.html" line="61">
+
+---
+
+&nbsp;
+
+```html
+    <section class="articles-container">
+        <!-- Hlavní článek -->
+        <section class="main-article">
+            <img src="images/main-image.png" alt="Obrázek ilustrující hru Mystic Lands Online"> <!-- Obrázek hlavního článku -->
+```
+
+---
+
+</SwmSnippet>
+
+<SwmSnippet path="/Web/styles.css" line="176">
+
+---
+
+&nbsp;
+
+```css
+
+/* Kontejner pro články: Flexbox pro umístění článků pod sebou */
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 ```
 
