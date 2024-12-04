@@ -11,19 +11,44 @@ title: Dokumentace
 
 ## Úvod
 
-Náš web QuestPoint je zpravodajskou stránkou pro hráče videoher. Web se zabývá nejnovějšími hrami, novinkami z her, a obsahuje články na daná témata. Ve článcích se autoři zabývají například i spekulacemi o tajných projektech, novými aktualizacemi již zveřejněných her, nebo naopak ohlášením nových herních projektů. Mimo to se autoři na stránkách zaměřují na uživatelské recenze specifických her, nebo také slaví prostřednictvím článků důležitá data pro hráče videoher, jako například 30 let od publikace počítačové hry Warcraft. Dále web obsahuje sekce s informacemi o redakci, zásadách ochrany, kariéře a nejhlavněji předplatném k newsletteru QuestPointu s možností odběru a platby. Web je plně responzivní a přizpůsobený všem platformám.
+Tento dokument vás provede implementací herního zpravodajského webu. Web je navržen tak, aby poskytoval nejnovější zprávy, recenze a retro obsah související s hraním. Má responzivní design, aby byl přístupný na různých zařízeních. Budeme se zabývat: 1. Prezentací webu, 2. Požadavky na implementaci, 3. Splněním projektových požadavků
+
+### Prezentace webu
+
+Náš web QuestPoint je zpravodajskou stránkou pro hráče videoher. Web se zabývá nejnovějšími hrami, novinkami z her, a obsahuje články na daná témata. Ve článcích se autoři zabývají například i spekulacemi o tajných projektech, novými aktualizacemi již zveřejněných her, nebo naopak ohlášením nových herních projektů. Mimo to se autoři na stránkách zaměřují na uživatelské recenze specifických her, nebo také slaví prostřednictvím článků důležitá data pro hráče videoher, jako například 30 let od publikace počítačové hry Warcraft. Dále web obsahuje sekce s informacemi o redakci, zásadách ochrany, kariéře a nejhlavněji předplatném k newsletteru QuestPointu s možností odběru a platby. Web je plně responzivní a přizpůsobený všem platformám, a nabízí uživatelsky přístupné rozhraní, které je přístupné a konzistentní.
 
 ## Požadavky na implementaci
 
 ### Popis stránek
 
-#### Hlavní stránka
+Webová stránka se skládá z několika klíčových sekcí:&nbsp;
+
+- Nejnovější články
+- Recenze
+- Pohled do minulosti
+- Předplatné
+- Zásady ochrany
+- Kariéra
+- O nás
+- Včetně stránky pro výsledky vyhledávání
+
+Hlavní stránka sestává z několika hlavních sekcí:
+
+- Záhlaví s logem a navigačním menu
+- Sekce s hlavními články
+- Sekce s recenzemi
+- Sekce s retrospektivou
+- Zápatí s navigací a odkazy na sociální sít
+
+Každá sekce je jasně oddělena a obsahuje relevantní informace a obrázky.
+
+#### Hlavní stránka - záhlaví
 
 <SwmSnippet path="/Web/index.html" line="1">
 
 ---
 
-Hlavní stránka obsahuje několik sekcí: nejnovější články, recenze, a retro články. Každá sekce je jasně oddělena a obsahuje relevantní informace a obrázky.
+Záhlaví je připevněné na vrchu stránky a obsahuje logo webové stránky, včetně burger menu pro mobilní navigaci.
 
 ```
 <!DOCTYPE html>
@@ -65,6 +90,8 @@ Hlavní stránka obsahuje několik sekcí: nejnovější články, recenze, a re
 <SwmSnippet path="/Web/index.html" line="37">
 
 ---
+
+Zde máme HTML kód pro off-screen menu. Skládá se z vyhledávacího pole a seznamu odkazů. Odkazy se používají k navigaci do různých částí stránky.
 
 ```
 <div class="off-screen-menu">
@@ -205,6 +232,8 @@ Hlavní stránka obsahuje několik sekcí: nejnovější články, recenze, a re
 <SwmSnippet path="/Web/index.html" line="147">
 
 ---
+
+Here we have the footer section of the webpage. It includes navigation links for 'O nás', 'Zásady ochrany', 'Kariéra', and 'Předplatné'. It also displays social media icons for YouTube, X, Instagram, and Facebook. At the bottom, there is a note stating that it is a studentský projekt.
 
 ```
 <!-- Patička -->
