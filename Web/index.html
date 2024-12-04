@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- Sekce metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming News Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Odkaz na externí stylopis -->
+</head>
+<body>
+<!-- Hlavička -->
+<header>
+        <div class="logo">
+                <img src="images/logo.png" alt="Logo webu Questpoint">
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#main-articles-heading">Nejnovější články</a></li>
+                <li><a href="#reviews-heading">Recenze</a></li>
+                <li><a href="#retro-heading">Pohled do minulosti</a></li>
+                <li><a href="#">Předplatné</a></li>
+                <li><a href="#">Zásady ochrany</a></li>
+                <li><a href="#">Kariéra</a></li>
+                <li><a href="#">O nás</a></li>
+            </ul>
+        </nav>
+        <div class="desktop-search-bar">
+            <input type="text" placeholder="Hledat...">
+        </div>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+</header>
+
+<div class="off-screen-menu">
+    <div class="mobile-search-bar">
+      <input type="text" placeholder="Hledat...">
+    </div>
+    <ul>
+      <li><a href="#main-articles-heading">Nejnovější články</a></li>
+      <li><a href="#reviews-heading">Recenze</a></li>
+      <li><a href="#retro-heading">Pohled do minulosti</a></li>
+      <li><a href="#">Předplatné</a></li>
+      <li><a href="#">Zásady ochrany</a></li>
+      <li><a href="#">Kariéra</a></li>
+      <li><a href="#">O nás</a></li>
+      <li><a href="#">QuestPoint</a></li>
+      <li><a href="#">Všechna práva vyhrazena</a></li>
+    </ul>
+</div>
+
+<script src="./menu.js"></script>
+
+
+
+<!-- Hlavní sekce s články -->
+<main class="articles-wrapper" aria-labelledby="main-articles-heading">
+        <h2 id="main-articles-heading" class="main-articles-heading">Nejnovější články</h2> <!-- Nadpis sekce nejnovějších článků -->
+    <section class="articles-container">
+        <!-- Hlavní článek -->
+        <section class="main-article">
+            <img src="images/main-image.png" alt="Obrázek ilustrující hru Mystic Lands Online"> <!-- Obrázek hlavního článku -->
+            <div class="article-text">
+                <h2>Spekuluje se o tajném projektu – Mystic Lands Online: Nové MMORPG?</h2> <!-- Nadpis hlavního článku -->
+                <p>Kateřina Novotná 15.11.2024</p> <!-- Informace o autorovi a datu -->
+            </div>
+        </section>
+        <!-- Vedlejší články -->
+        <section class="side-articles">
+            <div class="side-article">
+                <img src="images/side-image1.png" alt="Obrázek ze hry Realm of Eternity, zachycující nové AI společníky"> <!-- Obrázek vedlejšího článku -->
+                <h3>Nový update pro populární RPG hru Realm of Eternity přináší revoluční AI společníky!</h3> <!-- Nadpis vedlejšího článku -->
+                <p>Zuzana Veselá 15.11.2024</p> <!-- Informace o autorovi a datu -->
+            </div>
+            <div class="side-article">
+                <img src="images/side-image2.png" alt="Obrázek ze hry Metro: Shadows of Moscow, zachycující temné podzemí"> <!-- Obrázek vedlejšího článku -->
+                <h3>Metro: Shadows of Moscow – Návrat do hlubin podzemí v novém temném dílu?</h3> <!-- Nadpis vedlejšího článku -->
+                <p>Petr Král 14.11.2024</p> <!-- Informace o autorovi a datu -->
+            </div>
+        </section>
+    </section>
+</main>
+
+<!-- Sekce recenzí -->
+<section class="reviews" aria-labelledby="reviews-heading">
+    <h2 id="reviews-heading">Recenze</h2> <!-- Nadpis sekce recenzí -->
+    <!-- Jednotlivé recenze -->
+    <div class="review">
+        <img src="images/lifeisstrange.png" alt="Obrázek obalu hry Life is Strange"> <!-- Obrázek recenze -->
+        <div class="review-text">
+            <h3>Life is Strange</h3> <!-- Titulek recenze -->
+            <p>Petr Král 8.10.2024</p> <!-- Informace o autorovi a datu -->
+        </div>
+    </div>
+    <div class="review">
+        <img src="images/eldenring.png" alt="Obrázek obalu hry Elden Ring"> <!-- Obrázek recenze -->
+        <div class="review-text">
+            <h3>Elden Ring</h3> <!-- Titulek recenze -->
+            <p>Petr Král 6.5.2024</p> <!-- Informace o autorovi a datu -->
+        </div>
+    </div>
+    <div class="review">
+        <img src="images/farming simulator.png" alt="Obrázek obalu hry Farming Simulator 2025"> <!-- Obrázek recenze -->
+        <div class="review-text">
+            <h3>Farming Simulator 2025</h3> <!-- Titulek recenze -->
+            <p>Zuzana Veselá 11.11.2024</p> <!-- Informace o autorovi a datu -->
+        </div>
+    </div>
+    <div class="review">
+        <img src="images/cs.jpeg" alt="Obrázek obalu hry Cities Skylines 2"> <!-- Obrázek recenze -->
+        <div class="review-text">
+            <h3>Cities Skylines 2 – Město vašich snů (a nočních můr)</h3> <!-- Titulek recenze -->
+            <p>Kateřina Novotná 14.11.2024</p> <!-- Informace o autorovi a datu -->
+        </div>
+    </div>
+</section>
+
+<!-- Retro sekce -->
+<section class="retro" aria-labelledby="retro-heading">
+    <h2 id="retro-heading">Pohled do minulosti</h2> <!-- Nadpis retro sekce -->
+    <!-- Jednotlivé retro články -->
+    <div class="retro-article">
+        <img src="images/wolfenstein.png" alt="Obrázek z původní hry Wolfenstein, klasická akční hra"> <!-- Obrázek retro článku -->
+        <div class="retro-text">
+            <h3>Wolfenstein: Průkopník herního průmyslu a legenda akčních her</h3> <!-- Titulek retro článku -->
+            <p>Kateřina Novotná 19.11.2024</p> <!-- Informace o autorovi a datu -->
+        </div>
+    </div>
+    <div class="retro-article">
+        <img src="images/hl.png" alt="Obrázek z původní hry Half-Life, ukazující Gordona Freemana"> <!-- Obrázek retro článku -->
+        <div class="retro-text">
+            <h3>20 let Half-Life: Jak Gordon Freeman navždy změnil svět her</h3> <!-- Titulek retro článku -->
+            <p>Kateřina Novotná 14.11.2024</p> <!-- Informace o autorovi a datu -->
+        </div>
+    </div>
+    <div class="retro-article">
+        <img src="images/wow.png" alt="Obrázek ze hry Warcraft, ukazující legendární bitvu"> <!-- Obrázek retro článku -->
+        <div class="retro-text">
+            <h3>30 let Warcraftu: Jak se zrodila legenda herního světa</h3> <!-- Titulek retro článku -->
+            <p>Zuzana Veselá 12.12.2023</p> <!-- Informace o autorovi a datu -->
+        </div>
+    </div>
+</section>
+
+<!-- Patička -->
+<footer>
+    <div class="footer-nav" role="navigation" aria-label="Footer Navigation">
+        <a href="#">O nás</a> <!-- Odkaz v patice -->
+        <a href="#">Zásady ochrany</a> <!-- Odkaz v patice -->
+        <a href="#">Kariéra</a> <!-- Odkaz v patice -->
+        <a href="#">Předplatné</a> <!-- Odkaz v patice -->
+    </div>
+    <div class="footer-socials">
+        <p>Všechna práva vyhrazena</p> <!-- Oznámení o autorských právech -->
+        <div class="social-icons" role="navigation" aria-label="Social Media Links">
+            <!-- Ikony sociálních sítí -->
+            <a href="#" aria-label="YouTube"><img src="images/yt.png" alt="Ikona YouTube" aria-hidden="true"></a>
+            <a href="#" aria-label="X"><img src="images/x.png" alt="Ikona X" aria-hidden="true"></a>
+            <a href="#" aria-label="Instagram"><img src="images/ig.png" alt="Ikona Instagram" aria-hidden="true"></a>
+            <a href="#" aria-label="Facebook"><img src="images/fb.png" alt="Ikona Facebook" aria-hidden="true"></a>
+        </div>
+    </div>
+    <p>Studentský projekt</p> <!-- Poznámka v patice -->
+</footer>
+</body>
+</html>
